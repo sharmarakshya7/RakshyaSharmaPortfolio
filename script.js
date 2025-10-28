@@ -82,3 +82,28 @@ typeWriter();
   window.addEventListener('scroll', revealSkills);
   window.addEventListener('load', revealSkills);
 
+//Projects
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = "flex";
+
+  // animate bars
+  modal.querySelectorAll(".progress").forEach(bar => {
+    const width = bar.dataset.width;
+    bar.style.width = "0";
+    setTimeout(() => (bar.style.width = width), 150);
+  });
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = "none";
+  modal.querySelectorAll(".progress").forEach(bar => (bar.style.width = "0"));
+}
+
+window.onclick = function(e) {
+  document.querySelectorAll(".modal").forEach(modal => {
+    if (e.target === modal) closeModal(modal.id);
+  });
+};
