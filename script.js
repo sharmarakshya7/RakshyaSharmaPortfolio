@@ -86,7 +86,7 @@ typeWriter();
 
 function openModal(id) {
   const modal = document.getElementById(id);
-  modal.style.display = "flex";
+  modal.style.display = "block";
 
   // animate bars
   modal.querySelectorAll(".progress").forEach(bar => {
@@ -107,3 +107,4 @@ window.onclick = function(e) {
     if (e.target === modal) closeModal(modal.id);
   });
 };
+
