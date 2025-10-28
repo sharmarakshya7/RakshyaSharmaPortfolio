@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Resume Builder</title>
+
+  <!-- External libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.5.0/docx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://unpkg.com/docx@8.0.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.5.0/docx.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+  <!-- Navbar -->
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Free Resume Builder</div>
+
+         <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
+
+      <div class="nav-buttons" id="navMenu">
+
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="home" class="hero">
+
+     <div class="hero-image">
+    <img src="./Resume picture.png" alt="Illustration of resume builder">
+  </div>
+
+  <div class="hero-content">
+    <h1 class="typewriter">Professional ATS Resume Builder</h1>
+    
+    <p class="fade-in">
+      Create a free professional, Applicant tracking system (ATS)-friendly resume that gets you noticed by recruiters
+    </p>
+
+    <a href="#builder" class="cta-btn">Build My Resume</a>
+
+    <a class="scan-btn" onclick="scanResume()">Scan My Resume</a>
+
+
+  </div>
+
+
+  
+</section>
+
+   <div id="scan-section"></div>
+
+<div id="scan-results" class="scan-results" style="display:none;"></div>
+
+
+    <div id="builder" class="container2">
+        <div class="main-content">
+            <div class="form-section">
+                <div class="section-title">Resume Information</div>
+                
+                <div class="tab-container">
+                    <button class="tab active" onclick="showTab('contact')">Contact</button>
+                    <button class="tab" onclick="showTab('summary')">Summary</button>
+                    <button class="tab" onclick="showTab('skills')">Skills</button>
+                    <button class="tab" onclick="showTab('experience')">Experience</button>
+                    <button class="tab" onclick="showTab('education')">Education</button>
+                </div>
+
+                <div id="contact-tab" class="tab-content active">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="email" placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>LinkedIn Profile</label>
+                            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+                        <div class="form-group">
+                            <label>GitHub Profile</label>
+                            <input type="url" id="github" placeholder="https://github.com/yourusername">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Location *</label>
+                        <input type="text" id="location" placeholder="City, State">
+                    </div>
+
+                    <div class="tab-navigation">
+                        <button class="nav-btn back-btn" onclick="previousTab()" id="contactBackBtn" style="visibility: hidden;">← Back</button>
+                        <button class="nav-btn save-btn" onclick="saveProgress()"> Save Progress</button>
+                        <button class="nav-btn next-btn" onclick="nextTab()" id="contactNextBtn">Next: Summary →</button>
+                    </div>
+                </div>
+
+                <div id="summary-tab" class="tab-content">
+                    <h3>Professional Summary</h3>
+                    <div class="form-group">
+                        <label>Professional Summary (2-4 lines) *</label>
+                        <textarea id="summary" rows="4" placeholder="Results-driven Java Developer with 3+ years of experience in banking systems, REST API development, and cloud deployment. Strong in Spring Boot, MySQL, and Agile methodology."></textarea>
+                    </div>
+
+                    <div class="tab-navigation">
+                        <button class="nav-btn back-btn" onclick="previousTab()" id="summaryBackBtn">← Back: Contact</button>
+                        <button class="nav-btn save-btn" onclick="saveProgress()"> Save Progress</button>
+                        <button class="nav-btn next-btn" onclick="nextTab()" id="summaryNextBtn">Next: Skills →</button>
+                    </div>
+                </div>
+
+                <div id="skills-tab" class="tab-content">
+                    <h3>Technical Skills</h3>
+                    <div id="skills-container">
+                        <div class="skill-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <input type="text" class="skill-category" placeholder="Languages">
+                                </div>
+                                <div class="form-group">
+                                    <label>Skills (comma separated)</label>
+                                    <input type="text" class="skill-items" placeholder="Java, JavaScript, SQL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addSkillGroup()">+ Add Skill Category</button>
+
+                    <div class="tab-navigation">
+                        <button class="nav-btn back-btn" onclick="previousTab()" id="skillsBackBtn">← Back: Summary</button>
+                        <button class="nav-btn save-btn" onclick="saveProgress()"> Save Progress</button>
+                        <button class="nav-btn next-btn" onclick="nextTab()" id="skillsNextBtn">Next: Experience →</button>
+                    </div>
+                </div>
+
+                <div id="experience-tab" class="tab-content">
+                    <h3>Professional Experience</h3>
+                    <div id="experience-container">
+                        <div class="experience-item">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Job Title *</label>
+                                    <input type="text" class="job-title" placeholder="Java Developer">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Name *</label>
+                                    <input type="text" class="company" placeholder="XYZ Bank">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Location</label>
+                                    <input type="text" class="job-location" placeholder="Virginia">
+                                </div>
+                                <div class="form-group">
+                                    <label>Duration *</label>
+                                    <input type="text" class="duration" placeholder="Jan 2022 – Present">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Responsibilities (one per line) *</label>
+                                <textarea class="responsibilities" rows="4" placeholder="• Developed and deployed secure loan management modules using Spring Boot&#10;• Integrated REST APIs with external payment gateway using JSON"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addExperience()">+ Add Experience</button>
+                    
+                    <h3 style="margin-top: 2rem;">Projects (Optional)</h3>
+                    <div id="projects-container">
+                        <div class="project-item">
+                            <div class="form-group">
+                                <label>Project Name</label>
+                                <input type="text" class="project-name" placeholder="E-commerce Platform">
+                            </div>
+                            <div class="form-group">
+                                <label>Technologies Used</label>
+                                <input type="text" class="project-tech" placeholder="React, Node.js, MongoDB">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="project-desc" rows="3" placeholder="• Built full-stack e-commerce application&#10;• Implemented secure payment processing"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addProject()">+ Add Project</button>
+
+                    <div class="tab-navigation">
+                        <button class="nav-btn back-btn" onclick="previousTab()" id="experienceBackBtn">← Back: Skills</button>
+                        <button class="nav-btn save-btn" onclick="saveProgress()">Save Progress</button>
+                        <button class="nav-btn next-btn" onclick="nextTab()" id="experienceNextBtn">Next: Education →</button>
+                    </div>
+                </div>
+
+                <div id="education-tab" class="tab-content">
+                    <h3>Education</h3>
+                    <div id="education-container">
+                        <div class="education-item">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Degree *</label>
+                                    <input type="text" class="degree" placeholder="Bachelor of Science in Computer Science">
+                                </div>
+                                <div class="form-group">
+                                    <label>University *</label>
+                                    <input type="text" class="university" placeholder="Virginia Tech">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Graduation Year</label>
+                                    <input type="text" class="grad-year" placeholder="2021">
+                                </div>
+                                <div class="form-group">
+                                    <label>GPA (Optional)</label>
+                                    <input type="text" class="gpa" placeholder="3.8/4.0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addEducation()">+ Add Education</button>
+                    
+                    <h3 style="margin-top: 2rem;">Certifications (Optional)</h3>
+                    <div id="certifications-container">
+                        <div class="certification-item">
+                            <div class="form-group">
+                                <label>Certification Name</label>
+                                <input type="text" class="cert-name" placeholder="AWS Certified Developer – Associate">
+                            </div>
+                            <div class="form-group">
+                                <label>Issuing Organization</label>
+                                <input type="text" class="cert-org" placeholder="Amazon Web Services">
+                            </div>
+                            <div class="form-group">
+                                <label>Date Obtained</label>
+                                <input type="text" class="cert-date" placeholder="March 2023">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addCertification()">+ Add Certification</button>
+                    
+
+                    <div class="tab-navigation">
+                        <button class="nav-btn back-btn" onclick="previousTab()" id="educationBackBtn">← Back: Experience</button>
+                        <button class="nav-btn save-btn" onclick="saveProgress()"> Save Progress</button>
+                        <button class="nav-btn complete-btn" onclick="completeResume()" id="educationCompleteBtn">✅ Complete Resume</button>
+                    </div>
+                </div>
+
+                <div class="success-message" id="successMessage">Resume saved successfully!</div>
+
+                <div class="download-section">
+                    <h3>Download Your Resume</h3>
+                    
+                    <button class="download-btn" onclick="downloadDOCX()"> Download DOCX</button>
+                    <button class="download-btn" onclick="printResume()">Print Resume</button>
+                </div>
+            </div>
+            
+           
+
+ <div id="resume-preview" class="resume-preview">
+                    <div class="resume-header">
+                        <div class="resume-name">Your Name</div>
+                        <div class="resume-contact">Phone | Email | Location</div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <div class="resume-section-title">PROFESSIONAL SUMMARY</div>
+                        <p>Your professional summary will appear here...</p>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <div class="resume-section-title">TECHNICAL SKILLS</div>
+                        <p>Your skills will appear here...</p>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <div class="resume-section-title">PROFESSIONAL EXPERIENCE</div>
+                        <p>Your experience will appear here...</p>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <div class="resume-section-title">EDUCATION</div>
+                        <p>Your education will appear here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="hero2" style="margin-top: 0;">
+        <div class="container">
+            <h2>About ATS Resume Builder</h2>
+            <p>ATS Resume Builder is a modern, browser-based tool designed to help job seekers create professional, recruiter-ready resumes in minutes. 
+                The platform generates resumes that are fully compatible with Applicant Tracking Systems (ATS), ensuring your application passes automated screenings 
+                and reaches hiring managers.
+
+Built with HTML, CSS, and JavaScript, the tool allows you to enter your details step by step, preview your resume instantly, and download it in
+DOCX or PDF formats. 
+Our goal is to simplify resume creation with a clean design, intuitive workflow, and data-driven structure that highlights your
+ skills and experience effectively—helping you stand out in today’s competitive job market.  
+ </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright © Rakshya Sharma</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src = "script.js" > </script>
+</body>
+</html>

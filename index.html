@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshya</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+  
+  </style>
+<body>
+    
+    <header class = "header">  
+    <nav>
+            <div class="nav-container">
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                 <a href="./index.html" class="logo"> <img src="./images/logo.png"  height="60"> </a>
+                </div>
+            <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="./index.html">Home</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#background">Background</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#skills">Skills</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#projects">Projects</a></div>
+                    <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact Me</a></div>
+            </div>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+            <div class="dropdown">
+                <div class="links">
+                    <a href="./index.html">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#background">Background</a>
+                     <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact Us</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                </div>
+            </div>
+</nav>
+</header>
+
+
+
+<section class="Home">
+
+
+ <div class="main-container">
+    <div class="Hello">
+          <h1 data-aos="fade-left" data-aos-duration="2000" data-aos-delay="800" >Hello this is </br>  <span class="creative" >Rakshya Sharma </span></h1>
+<p class="intro-line" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="800">
+  I am a <span id="role" class="animated-role"></span>
+</p>
+
+         <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+            <a href="https://www.instagram.com/rakshya.sharma7/" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/rock.xya.3/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/rakshya-sharma/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/RakshyaSharma8"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+     <div class= "buttons">
+          <button onclick="openContactModal()" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" > Email me </button>
+         
+     </div>
+  </div>
+  <div class="image">
+    <img data-aos="fade-left"  data-aos-duration="3000" data-aos-delay="800" src="./images/Untitled design (4).png">
+ </div>
+ </div>
+
+</section>
+
+
+<section id="about" class="About">
+  <div class="intro">
+     
+      <div class="paragraph"><h2> About Rakshya  </h2>
+         <p>Software Engineer with over 6 years of experience in building enterprise
+         applications by using Java, Spring Boot, and Microservices.
+          Skilled in developing RESTful APIs and Kafka-driven architectures for reliable data processing. 
+          Experienced in Angular, Reactive Forms, Lazy Loading, and Material UI to create interactive and
+           responsive dashboards. Strong knowledge of SQL and NoSQL databases for query optimization and
+            transaction management. Hands-on experience with AWS, Docker, Kubernetes, and CI/CD pipelines to
+             achieve automated and consistent deployments. Focus on Agile practices, TDD, and SOLID principles 
+             for high-quality solutions. A collaborative approach is applied to connect backend and frontend 
+             systems so that business goals are delivered effectively.
+
+      </p></div>
+  <img  src="./images/resized.jpg" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500" >
+</div>
+  
+  </section >
+
+
+  <section id="background" class="background">
+    <div class="Background-heading">
+      <h1>Background</h1>
+    </div>
+  
+    <div class="background-cards" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="700">
+      
+      <!-- Card 1 -->
+      <div class="back">
+        <div class="backimg"><img src="./images/bird.png"></div>
+        <div class="uni"><h2>Washington University</h2></div>
+        <div class="unilist">
+          <p>Master’s of Science in Information Technology<br>(2023–2025)</p>
+            
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <!-- Card 3 -->
+<div class="back">
+  <div class="backimg"><img src="./images/setting.png" alt="work icon"></div>
+  <div class="uni"><h2>Fitch Ratings</h2></div>
+  <div class="unilist">
+    <p>Java Software Engineer<br>New York, NY <br>(Feb 2024 – Present)</p>
+     </div>
+</div>
+
+<!-- Card 4 -->
+<div class="back">
+  <div class="backimg"><img src="./images/setting.png" alt="work icon"></div>
+  <div class="uni"><h2>Carta</h2></div>
+  <div class="unilist">
+    <p>Java Software Engineer<br>California, USA<br> (Jan 2022 – Jan 2024)</p>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="back">
+  <div class="backimg"><img src="./images/setting.png" alt="work icon"></div>
+  <div class="uni"><h2>Lowe’s</h2></div>
+  <div class="unilist">
+    <p>Java Developer<br>North Carolina, USA <br>(Nov 2019 – Dec 2021)</p>
+   </div>
+</div>  
+  </section>
+
+ <!----projects---> 
+
+  <section id="projects" class="projects">
+
+<div>
+  <h1>Projects</h1>
+</div>
+
+<div class="card-container" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="700">
+  <!-- Fitch Ratings -->
+  <div class="card" onclick="openModal('fitchModal')">
+    <img src="./images/fitch-ratings-inc-vector-logo.png" alt="Fitch Ratings">
+    <h3>Financial Data Reporting </h3>
+    <button class="know-more">Know More »</button>
+  </div>
+
+  <!-- Carta -->
+  <div class="card" onclick="openModal('cartaModal')">
+    <img src="./images/carta.png" alt="Carta">
+    <h3>Cap Table Management Platform</h3>
+    <button class="know-more">Know More »</button>
+  </div>
+
+  <!-- Lowe's -->
+  <div class="card" onclick="openModal('lowesModal')">
+    <img src="./images/Lowes.png" alt="Lowe's">
+    <h3>Vendor Data Portal</h3>
+    <button class="know-more">Know More »</button>
+  </div>
+
+
+ <!-- ResumeBuilder -->
+  <div class="card" onclick="openModal('ResumeModal')">
+    <img src="./images/Resume picture.png" alt="Lowe's">
+    <h3>Resume Builder</h3>
+    <button class="know-more">Know More »</button>
+  </div>
+</div>
+</div>
+
+
+<!-- Fitch Modal -->
+<div id="fitchModal" class="modal"> 
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('fitchModal')">&times;</span>
+
+    <div class="modal-body">
+      <!-- Left Section -->
+      <div class="modal-left">
+        <p>The Financial Data Reporting Platform was created to handle consolidated reporting by connecting multiple data sources into a unified platform. The project improved reporting efficiency through real-time APIs, transaction processing, and interactive dashboards.</p>
+        
+        <h4>Key Responsibilities:</h4>
+        <ul>
+          <li>Built Java 17 RESTful APIs in Spring Boot with Spring Profiles, Beans, and Actuator for ECS workloads.</li>
+          <li>Developed microservices with DTO validation and Kafka pipelines with retry logic and Dead Letter Queues (DLQ) for reliable event handling.</li>
+          <li>Implemented Resilience4j circuit breakers and OAuth2/JWT authentication to maintain fault tolerance and API security.</li>
+          <li>Designed Angular 16 dashboards with TypeScript interceptors and Material UI for dynamic data filtering and token renewal.</li>
+          <li>Automated CI/CD using Docker and Jenkins for blue-green deployments in AWS ECS clusters.</li>
+          <li>Monitored workloads through Splunk, OpenTelemetry, and CloudWatch for proactive system optimization.</li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="modal-right">
+        <h4>Skills & Tools Used:</h4>
+        <div class="skill"><span>Java 17 / Spring Boot</span><div class="bar"><div class="progress" data-width="95%"></div></div></div>
+        <div class="skill"><span>Kafka / DLQ</span><div class="bar"><div class="progress" data-width="90%"></div></div></div>
+        <div class="skill"><span>Angular 16</span><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+        <div class="skill"><span>AWS ECS / Docker</span><div class="bar"><div class="progress" data-width="88%"></div></div></div>
+        <div class="skill"><span>Resilience4j / OAuth2</span><div class="bar"><div class="progress" data-width="80%"></div></div></div>
+        <div class="skill"><span>Splunk / CloudWatch</span><div class="bar"><div class="progress" data-width="75%"></div></div></div>
+        <img src="./images/fitch-ratings-inc-vector-logo.png" alt="Fitch Ratings Logo" class="client-logo">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Carta Modal -->
+<div id="cartaModal" class="modal"> 
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('cartaModal')">&times;</span>
+
+    <div class="modal-body">
+      <!-- Left Section -->
+      <div class="modal-left">
+        <p>The Cap Table Management Platform was designed to manage equity transactions and shareholder records. The project streamlined financial reporting, onboarding, and reconciliation workflows by integrating APIs, Kafka pipelines, and optimized databases.</p>
+        
+        <h4>Key Responsibilities:</h4>
+        <ul>
+          <li>Developed modular Java 11 services in Spring Boot with DTO mapping and validation to modernize legacy systems into microservices.</li>
+          <li>Designed Angular 14 dashboards using TypeScript, RxJS, and interceptors to enhance data interaction and authentication flows.</li>
+          <li>Implemented Kafka topics with retries, offset tracking, and asynchronous worker services to ensure event reliability during high traffic.</li>
+          <li>Built relational schemas in PostgreSQL and optimized queries with indexing and stored procedures for high-performance reporting.</li>
+          <li>Automated deployments using Docker containers and Jenkins CI/CD pipelines for scalable AWS ECS workloads.</li>
+          <li>Monitored Kafka and ECS health metrics via Splunk and CloudWatch to ensure stable production pipelines.</li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="modal-right">
+        <h4>Skills & Tools Used:</h4>
+        <div class="skill"><span>Java 11 / Spring Boot</span><div class="bar"><div class="progress" data-width="94%"></div></div></div>
+        <div class="skill"><span>Angular 14 / RxJS</span><div class="bar"><div class="progress" data-width="88%"></div></div></div>
+        <div class="skill"><span>Kafka / Async Pipelines</span><div class="bar"><div class="progress" data-width="90%"></div></div></div>
+        <div class="skill"><span>PostgreSQL / MongoDB</span><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+        <div class="skill"><span>Docker / Jenkins</span><div class="bar"><div class="progress" data-width="67%"></div></div></div>
+        <div class="skill"><span>AWS ECS / CloudWatch</span><div class="bar"><div class="progress" data-width="70%"></div></div></div>
+        <img src="./images/carta.png" alt="Carta Logo" class="client-logo">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Lowe's Modal -->
+<div id="lowesModal" class="modal"> 
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('lowesModal')">&times;</span>
+
+    <div class="modal-body">
+      <!-- Left Section -->
+      <div class="modal-left">
+        <p>The Vendor Data Portal was developed to centralize supplier information and normalize incoming data feeds for retail systems. The project improved reporting accuracy, usability, and reduced data inconsistencies by modernizing both backend APIs and legacy JSP-based modules.</p>
+        
+        <h4>Key Responsibilities:</h4>
+        <ul>
+          <li>Developed Java 8 REST APIs in Spring Boot and integrated Oracle PL/SQL stored procedures for optimized vendor reporting workflows.</li>
+          <li>Built Angular 10 modules using reactive forms, validation, and lazy loading to improve frontend performance and user experience.</li>
+          <li>Maintained Spring MVC controllers and JSP/Struts modules for legacy applications with XML-based configurations and schema mappings.</li>
+          <li>Integrated SOAP services with schema validation and XML transformation logic to ensure normalized vendor data across systems.</li>
+          <li>Configured Jenkins CI/CD pipelines to automate WAR packaging and Tomcat deployments across staging and production environments.</li>
+          <li>Monitored production systems using Log4J and Splunk dashboards, implementing cron jobs and Linux scripts for automated maintenance.</li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="modal-right">
+        <h4>Skills & Tools Used:</h4>
+        <div class="skill"><span>Java 8 / Spring Boot</span><div class="bar"><div class="progress" data-width="92%"></div></div></div>
+        <div class="skill"><span>Angular 10 / TypeScript</span><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+        <div class="skill"><span>Oracle PL/SQL</span><div class="bar"><div class="progress" data-width="83%"></div></div></div>
+        <div class="skill"><span>SOAP / XML</span><div class="bar"><div class="progress" data-width="80%"></div></div></div>
+        <div class="skill"><span>Jenkins / Tomcat</span><div class="bar"><div class="progress" data-width="78%"></div></div></div>
+        <div class="skill"><span>Splunk / Log4J</span><div class="bar"><div class="progress" data-width="75%"></div></div></div>
+        <img src="./images/Lowes.png" alt="Lowe’s Logo" class="client-logo">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ATS Resume Builder Modal -->
+<div id="ResumeModal" class="modal"> 
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ResumeModal')">&times;</span>
+
+    <div class="modal-body">
+      <!-- Left Section -->
+      <div class="modal-left">
+        <h3>ATS Resume Builder <span class="role">– Personal Project</span></h3>
+        <p>
+          The ATS Resume Builder is a browser-based web application designed to help users create recruiter-ready resumes
+          that are fully compatible with Applicant Tracking Systems (ATS). The platform allows users to input, preview,
+          and export resumes in DOCX  format through a clean, interactive interface.
+        </p>
+
+        <ul>
+          <li>Developed a dynamic multi-tab resume builder interface using HTML, CSS, and JavaScript for a step-by-step guided workflow.</li>
+          <li>Integrated <code>html2pdf.js</code>, <code>docx.js</code>, and <code>html2canvas</code> to enable live PDF and DOCX exports directly from the browser.</li>
+          <li>Implemented responsive layouts using CSS Flexbox and Grid for seamless usability across devices.</li>
+          <li>Added a live preview section that updates in real time as users fill in form data.</li>
+          <li>Used Local Storage APIs for saving progress, allowing users to resume editing without losing data.</li>
+          <li>Applied DOM manipulation, event handling, and input validation to improve interactivity and data accuracy.</li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="modal-right">
+        <h4>Skills & Tools Used:</h4>
+        <div class="skill"><span>HTML5 / CSS3</span><div class="bar"><div class="progress" data-width="95%"></div></div></div>
+        <div class="skill"><span>JavaScript (ES6)</span><div class="bar"><div class="progress" data-width="93%"></div></div></div>
+        <div class="skill"><span>DOM Manipulation</span><div class="bar"><div class="progress" data-width="90%"></div></div></div>
+        <div class="skill"><span>Responsive Design</span><div class="bar"><div class="progress" data-width="85%"></div></div></div>
+        <div class="skill"><span>Local Storage / Validation</span><div class="bar"><div class="progress" data-width="80%"></div></div></div>
+        <img src="./images/Resume picture.png" alt="Resume Builder Logo" class="client-logo">
+
+         <!-- Live Project Button -->
+        <a href="https://www.freeresumedeveloper.com/" target="_blank" class="live-btn">View Live Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+    </section>
+
+  <!----Skills---> 
+<section id ="skills" class="skills">
+  <h2>Skills & Technologies</h2>
+  
+
+  <div class="skills-grid">
+
+    <!-- Example cards (use any number) -->
+  <!-- BACKEND -->
+<div class="skill-card">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="55" height="60" fill="rgb(155,72,25)">
+    <path d="M15.1 36.9s-2.2 1.3 1.5 1.8c4.3.6 6.4.5 11.1-.5 0 0 1.3.8 3.1 1.5-11.2 4.8-25.3-.3-15.7-2.8zM13.4 29.6s-2.5 1.8 1.3 2.2c4.7.5 8.3.6 14.6-.7 0 0 .9.9 2.4 1.3-13.9 4.1-29.4.3-18.3-2.8zM26.2 22.4c2.7 3.1-.7 5.9-.7 5.9s6.8-3.5 3.7-8c-2.9-4.1-5.1-6.1 6.9-13.1 0 0-18.8 4.7-9.9 15.2zM37.9 39.4c.2-.2.3-.4.5-.6-1.9.4-4.7.8-7.9 1-4.8.4-10.8.4-17.5-.3 5.1 2 20.1 3.2 24.9-.1zM30.8 31.7c-1.6.4-2.4.8-2.4.8s.6-.9 1.7-1.1c5.1-1.1 8.6-3.6 8.6-3.6s-2.3 2.5-7.9 3.9zM35.1 43.1s1.6 1.3-1.7 2.3c-6.2 1.9-25.6 2.5-31 .1-1.9-.8 1.7-2 2.9-2.3 1.2-.3 1.9-.2 1.9-.2-2.2-1.6-14.1 3-6 4.3 21.9 3.6 39.9-1.6 33.9-4.2z"/>
+  </svg>
+  <span>Java</span>
+</div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/springboot.svg"><span>Spring Boot</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg"><span>Spring MVC</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/springsecurity.svg"><span>Spring Security</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg"><span>AOP</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachetomcat.svg"><span>JSP</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hibernate.svg"><span>JPA / Hibernate</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jsonwebtokens.svg"><span>JWT</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachekafka.svg"><span>Apache Kafka</span></div>
+<!-- FRONTEND -->
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/angular.svg"><span>Angular</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg"><span>JavaScript</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg"><span>TypeScript</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg"><span>HTML5</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg"><span>CSS3</span></div>
+
+<div class="skill-card">
+  <svg viewBox="0 0 24 24" width="45" height="45" fill="rgb(155,72,25)"><path d="M3 7h8v2H3zm0 4h8v2H3zm0 4h8v2H3zM14 7h7v10h-7v-2h5V9h-5z"/></svg>
+  <span>REST APIs</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/junit5.svg"><span>JUnit</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cucumber.svg"><span>Cucumber</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postman.svg"><span>Postman</span></div>
+
+
+<!-- DATABASES -->
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg"><span>MySQL</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg"><span>PostgreSQL</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg"><span>Oracle</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mongodb.svg"><span>MongoDB</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazondynamodb.svg"><span>DynamoDB</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/redis.svg"><span>Redis</span></div>
+<div class="skill-card">
+  <svg viewBox="0 0 24 24" width="45" height="45" fill="rgb(155,72,25)"><path d="M3 18v-2h7v2H3zm0-4v-2h12v2H3zm0-4V8h14v2H3z"/></svg>
+  <span>Query Optimization</span>
+</div>
+
+<!-- DEVOPS -->
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg"><span>Docker</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg"><span>Kubernetes</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/helm.svg"><span>Helm</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg"><span>Jenkins</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/githubactions.svg"><span>CI/CD</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg"><span>Terraform</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg"><span>Git</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"><span>GitHub</span></div>
+
+<!-- CLOUD -->
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg"><span>AWS</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazoncloudwatch.svg"><span>CloudWatch</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/splunk.svg"><span>Splunk</span></div>
+<div class="skill-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/opentelemetry.svg"><span>OpenTelemetry</span></div>
+<div class="skill-card">
+  <svg viewBox="0 0 24 24" width="45" height="45" fill="rgb(155,72,25)">
+    <path d="M3 6l6 3 6-3 6 3-6 3-6-3-6 3V6zm0 9l6-3 6 3 6-3v6l-6 3-6-3-6 3v-6z"/>
+  </svg>
+  <span>Distributed Tracing</span>
+</div>
+
+<!-- OTHERS -->
+<div class="skill-card">
+  <svg viewBox="0 0 24 24" width="45" height="45" fill="rgb(155,72,25)"><path d="M4 4h16v4H4zM4 10h10v4H4zM4 16h7v4H4z"/></svg>
+  <span>Agile</span>
+</div>
+<div class="skill-card">
+  <svg viewBox="0 0 24 24" width="45" height="45" fill="rgb(155,72,25)">
+    <path d="M12 2a10 10 0 100 20 8 8 0 110-16 2 2 0 012 2H9a5 5 0 105 5V9h2v3a7 7 0 11-7-7h3a3 3 0 10-3 3h6"/>
+  </svg>
+  <span>Scrum</span>
+</div>
+
+</section>
+
+
+
+
+
+  </div>
+</div>
+
+  <div class="reach"> 
+    <div class="S2">
+      <div class="saying">
+        <p> Reach out if you want to create impactful visual art together </p>
+        <hr> 
+      </div>
+      <div class="socials">
+        <p> To see more of my work, visit my Socials</p> 
+
+        <div class="social-links2" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="500">
+          <a href="https://www.instagram.com/rakshya.sharma7/" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/rock.xya.3/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/rakshya-sharma/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/RakshyaSharma8"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+      <div class="Contact"> 
+        <p> Phone: 5715319083 </p>
+        <p></p> Email: sharmarakshya09@gmail.com</p> 
+      </div>
+    </div>
+  </div>
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Me</h2>
+      <form onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  </div>
+  
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ offset: 0 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
+
+
+</body>
+</html>
