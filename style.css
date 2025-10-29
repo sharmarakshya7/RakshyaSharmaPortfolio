@@ -961,7 +961,7 @@ color: rgb(155,72,25);
   .unilist p {
     font-size: 0.9rem;
   }
-}
+
 
 .card-container {
   flex-direction: column;
@@ -1040,7 +1040,7 @@ color: rgb(155,72,25);
   font-weight: 500;
   color: #333;
 }
-
+}
 /* Tablets → 4 per row */
 @media (max-width: 1024px) {
   .skills-grid {
@@ -1069,4 +1069,5 @@ color: rgb(155,72,25);
     font-size: 0.7rem;
   }
 }
+
 
