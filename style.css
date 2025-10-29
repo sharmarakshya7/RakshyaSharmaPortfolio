@@ -939,30 +939,44 @@ color: rgb(155,72,25);
   max-height: 200px;
   max-width: 90%;
 }
-/* Typography tweaks */
-.uni h2 {
-  font-size: 18px;
-  margin: 10px 0;
+
+
+  .Background-heading h1 {
+    font-size: 2rem;
+  }
+
+  .background-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back {
+    width: 90%;
+  }
+
+  .uni h2 {
+    font-size: 1.1rem;
+  }
+
+  .unilist p {
+    font-size: 0.9rem;
+  }
 }
 
-.unilist p {
-  font-size: 14px;
-}
-
-
-.card-container, .publications {
+.card-container {
   flex-direction: column;
   align-items: center;
   padding: 10px;
   gap: 15px;
 }
 
-.card, .violence, .meat {
+.card{
   width: 90%;
   max-width: 350px;
 }
-
-
+.projects{
+  margin-top: 4rem;
+}
 
 .Topic p {
   font-size: 13px;
@@ -976,7 +990,9 @@ color: rgb(155,72,25);
   font-size: 15px;
   padding: 8px;
 }
-}
+
+
+
 
 
 
@@ -1053,3 +1069,4 @@ color: rgb(155,72,25);
     font-size: 0.7rem;
   }
 }
+
