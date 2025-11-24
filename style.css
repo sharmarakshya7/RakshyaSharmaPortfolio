@@ -819,47 +819,6 @@ color: rgb(155,72,25);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
     #menu-icon {
       display: block;}
@@ -993,9 +952,6 @@ color: rgb(155,72,25);
 
 
 
-
-
-
 .skills {
   text-align: center;
   padding: 3rem 1rem;
@@ -1040,16 +996,8 @@ color: rgb(155,72,25);
   font-weight: 500;
   color: #333;
 }
-}
-/* Tablets → 4 per row */
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-/* Phones → Force 3 per row */
-@media (max-width: 700px) {
+
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
@@ -1069,5 +1017,6 @@ color: rgb(155,72,25);
     font-size: 0.7rem;
   }
 }
+
 
 
