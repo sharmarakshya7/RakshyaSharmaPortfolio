@@ -952,71 +952,73 @@ color: rgb(155,72,25);
 
 
 
-.skills {
+/* Skills Section */
+#skills {
+  padding: 30px 10px;
   text-align: center;
-  padding: 3rem 1rem;
   background: #fff;
+  overflow-x: hidden;
 }
 
+#skills h2 {
+  font-size: 1.3rem;
+  color:rgb(134, 73, 37);
+  margin-bottom: 20px;
+}
+
+/* Responsive Flex Grid */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
-  margin-top: 2rem;
+  gap: 12px;
 }
 
+/* Flexible Cards */
 .skill-card {
-  background: #f8f9fa;
+  flex: 1 1 110px;          /* allows shrinking & growing */
+  max-width: 120px;         /* upper limit on big screens */
+  min-width: 70px;          /* lower limit on small screens */
+  background: #f6f6f9;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0.5rem;
-  transition: transform 0.3s ease, background 0.3s ease;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  background: #f1f1f1;
+  transform: scale(1.05);
 }
 
 .skill-card img,
 .skill-card svg {
-  width: 45px;
-  height: 45px;
-  margin-bottom: 0.5rem;
+  width: 70%;
+  height: auto;
+  margin-bottom: 6px;
 }
 
 .skill-card span {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #333;
+  font-size: clamp(0.6rem, 2vw, 0.8rem); /* scales text */
+  color: #3c3c46;
 }
 
-
+/* Make icons shrink and wrap smoothly on very small screens */
+@media (max-width: 480px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 6px;
   }
-
   .skill-card {
-    padding: 0.6rem 0.3rem;
+    flex: 1 1 28%;
+    min-width: 60px;
+    max-width: 90px;
+    padding: 5px;
   }
-
   .skill-card img,
   .skill-card svg {
-    width: 35px;
-    height: 35px;
-  }
-
-  .skill-card span {
-    font-size: 0.7rem;
+    width: 60%;
   }
 }
 
-
+}
 
