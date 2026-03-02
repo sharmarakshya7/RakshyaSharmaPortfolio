@@ -1,4 +1,3 @@
-
 function hamburg(){
     const navbar = document.querySelector(".dropdown")
     navbar.style.transform = "translateY(0px)"
@@ -11,7 +10,7 @@ function cancel(){
 /* Hire button for conatct me block */
 
 function openContactModal() {
-    document.getElementById("contactModal").style.display = "block";
+  document.getElementById("contactModal").style.display = "flex";
   }
   
   function closeContactModal() {
@@ -34,7 +33,7 @@ function openContactModal() {
   };
 
 
-  const roles = ["Developer", "Front-end Developer", "Backend Developer"];
+  const roles = ["Developer", "Backend Developer", "Front-end Developer"];
 let roleIndex = 0;
 let charIndex = 0;
 let typing = true;
@@ -64,47 +63,31 @@ function typeWriter() {
 
 typeWriter();
 
-//Skills
 
 
+// Project rows
 
-  const skillCards = document.querySelectorAll('.skill-card');
-
-  function revealSkills() {
-    skillCards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 60) {
-        card.classList.add('show');
-      }
+document.addEventListener('aos:in', ({ detail }) => {
+  if (detail.classList.contains('project-row')) {
+    detail.querySelectorAll('.progress').forEach(bar => {
+      bar.style.width = bar.dataset.width;
     });
   }
+});
 
-  window.addEventListener('scroll', revealSkills);
-  window.addEventListener('load', revealSkills);
+//Skills
 
-//Projects
+const skillCards = document.querySelectorAll('.skill-card');
 
-function openModal(id) {
-  const modal = document.getElementById(id);
-  modal.style.display = "block";
-
-  // animate bars
-  modal.querySelectorAll(".progress").forEach(bar => {
-    const width = bar.dataset.width;
-    bar.style.width = "0";
-    setTimeout(() => (bar.style.width = width), 150);
+function revealSkills() {
+  skillCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      card.classList.add('show');
+    }
   });
 }
 
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  modal.style.display = "none";
-  modal.querySelectorAll(".progress").forEach(bar => (bar.style.width = "0"));
-}
-
-window.onclick = function(e) {
-  document.querySelectorAll(".modal").forEach(modal => {
-    if (e.target === modal) closeModal(modal.id);
-  });
-};
+window.addEventListener('scroll', revealSkills);
+window.addEventListener('load', revealSkills);
 
