@@ -1,0 +1,19 @@
+[33m93cd62c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to 93cd62c
+[33m5c372f1[m HEAD@{1}: checkout: moving from main to main
+[33m5c372f1[m HEAD@{2}: cherry-pick: Update portfolio layout and styling
+[33mae05bee[m HEAD@{3}: cherry-pick: CSS updates
+[33m5d9ab6c[m[33m ([m[1;32mbackup-before-cherrypick[m[33m)[m HEAD@{4}: commit: Update portfolio
+[33m508eacf[m HEAD@{5}: reset: moving to origin/main
+[33m93cd62c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{6}: commit: Update portfolio layout and styling
+[33m6497922[m HEAD@{7}: commit: CSS updates
+[33m1b75e5a[m HEAD@{8}: checkout: moving from main to main
+[33m1b75e5a[m HEAD@{9}: commit: CSS updates
+[33m8618900[m HEAD@{10}: commit: re -commit of all project updates
+[33mce3b413[m HEAD@{11}: rebase (finish): returning to refs/heads/main
+[33mce3b413[m HEAD@{12}: rebase (continue): Updated portfolio for projects
+[33m3801242[m HEAD@{13}: rebase (start): checkout origin/main
+[33m27f6141[m HEAD@{14}: reset: moving to 27f6141a3014b50975467c725e2c333ab1ac2b14
+[33m27f6141[m HEAD@{15}: rebase (abort): returning to refs/heads/main
+[33mb3e1c1b[m HEAD@{16}: pull origin main --rebase (start): checkout b3e1c1bd5bde4dfaa1a0e58cd3b14bb8fb506293
+[33m27f6141[m HEAD@{17}: Branch: renamed refs/heads/master to refs/heads/main
+[33m27f6141[m HEAD@{19}: commit (initial): Updated portfolio for projects

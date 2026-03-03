@@ -290,19 +290,16 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
 }
 
 /* Image container */
-.rakshya_image{
-    width: 18rem;
-    height: 25rem;
-    display: flex;
-    justify-content: center;
+
+.rakshya_image { flex: 0 1 460px; display: flex; justify-content: center; align-items: center; }
+.rakshya_image img {
+    width: min(480px, 40vw);
+    height: auto;
+    max-height: calc(100svh - 10vh - 60px);
+    object-fit: contain;
 }
 
-/* Image */
-#about .rakshya_image img{
-    height: auto;
-    display: block;
-    border-radius: 12px;
-}
+
 
 
 /* ============================================================
@@ -705,6 +702,23 @@ code {
     }
 
 
+    .rakshya_image img{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        display: block;
+    }
+
+    .rakshya_image{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        max-height: 300px;
+
+    }
+
+
     .image img{
         width: 100%;
         max-width: 320px;
@@ -797,9 +811,5 @@ code {
         padding: 0.5rem;
 
     }
-    .rakshya_image {
-        height: 20rem;
-        width: 15rem;
 
     }
-}
