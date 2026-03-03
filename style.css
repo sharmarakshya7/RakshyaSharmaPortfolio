@@ -16,7 +16,7 @@ section { display: flex; justify-content: center; align-items: center; }
    ============================================================ */
 nav {
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     position: sticky;
     top: 0;
     z-index: 200;
@@ -31,6 +31,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 0 2rem;
+
 }
 
 .logo { color: #000; font-size: 2rem; font-weight: 900; text-decoration: none; }
@@ -242,47 +243,76 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
 /* ============================================================
    ABOUT
    ============================================================ */
-.About { width: 100%; padding: 5rem 5vw; }
+/* ============================
+   ABOUT (Responsive)
+   ============================ */
 
-.intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.About{
     width: 100%;
-    max-width: 1300px;
+    background: url("./images/about image 2.png") no-repeat center center;
+    background-size: cover;
+    padding: clamp(3rem, 8vw, 10rem) 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.intro{
+    width: min(1100px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.paragraph { flex: 1 1 340px; padding: 1rem 2rem; }
-.paragraph h2 {
-    color: rgb(155, 72, 25);
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
-    font-style: italic;
-    font-weight: 700;
-    margin-bottom: 1.2rem;
-}
-.paragraph p {
-    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
-    line-height: 1.75;
-    text-align: justify;
+.paragraph{
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
 }
 
-.intro > img {
-    flex: 0 1 280px;
-    width: 100%;
-    max-width: 280px;
-    max-height: 420px;
-    object-fit: contain;
-    border-top-left-radius: 37%;
-    border-top-right-radius: 37%;
-    align-self: flex-end;
+.paragraph h2{
+    color: rgb(155, 72, 25);
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
+
+.paragraph p{
+    font-size: clamp(0.85rem, 2.2vw, 1.2rem);
+    line-height: 1.75;
+}
+
+/* Image container */
+.rakshya_image{
+    width: 18rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image */
+#about .rakshya_image img{
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
 
 /* ============================================================
    BACKGROUND
    ============================================================ */
+#background{
+    display: flex;
+    flex-direction: column;
+}
+
 .Background-heading {
     text-align: center;
     padding: 3rem 1rem 0;
@@ -294,10 +324,12 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
     font-weight: 700;
     color: rgb(155, 72, 25);
     font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 4rem;
 }
 
 .background-cards {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
@@ -344,6 +376,8 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
     text-align: center;
 }
 
+
+
 .project-row {
     display: grid;
     grid-template-columns: 180px 1fr 325px;
@@ -366,11 +400,11 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
     gap: 12px;
     text-align: center;
 }
-.proj-left img  { width: 80px; height: 55px; object-fit: contain; }
-.proj-left .img2 { width: 80px; height: 80px; object-fit: contain; }
+.proj-left img  { width: 100px; height: 65px; object-fit: contain; }
+.proj-left .img2 { width: 150px; height: 150px; object-fit: contain; }
 .proj-left h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     font-style: italic;
     color: rgb(155, 72, 25);
@@ -386,7 +420,7 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
 }
 
 .proj-mid { padding: 2rem 1.8rem; border-right: 1px solid #d7c2b4; }
-.proj-mid p { font-size: 1rem; color: #6b5b4f; line-height: 1.7; margin-bottom: 1rem; }
+.proj-mid p {     font-size: clamp(0.85rem, 2.2vw, 1rem); color: #6b5b4f; line-height: 1.7; margin-bottom: 1rem; }
 .proj-mid h4 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
@@ -396,7 +430,7 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
 }
 .proj-mid ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 .proj-mid ul li {
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2.2vw, 1rem);
     color: #444;
     line-height: 1.55;
     padding-left: 14px;
@@ -416,17 +450,19 @@ button[type="submit"]:hover { background: rgb(97, 50, 22); }
     background: #fafafa;
     display: flex;
     flex-direction: column;
+
 }
 .proj-right h4 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2.2vw, 1.2rem);
     font-weight: 700;
     color: rgb(155, 72, 25);
     margin-bottom: 1rem;
 }
 
+
 .skill { margin-bottom: 12px; }
-.skill span { display: block; font-size: 0.95rem; color: #6b5b4f; margin-bottom: 4px; }
+.skill span { display: block;    font-size: clamp(0.85rem, 2.2vw, 0.95rem); color: #6b5b4f; margin-bottom: 4px; }
 .bar { background: #e8e8e8; border-radius: 99px; height: 5px; overflow: hidden; }
 .progress {
     height: 100%;
@@ -562,10 +598,15 @@ code {
     max-width: 600px;
 }
 
-.saying p { font-size: clamp(1.1rem, 2vw, 1.8rem); margin-bottom: 0.8rem; font-family: 'Times New Roman', Times, serif; }
+.saying p { font-size: clamp(1.1rem, 2vw, 1.8rem);
+    margin-bottom: 0.8rem;
+    font-family: 'Times New Roman',
+    Times, serif; }
+
+
 .saying hr { border: none; border-top: 1px solid rgba(255,255,255,0.35); width: 60%; margin: 0 auto; }
 
-.socials p { font-size: clamp(1rem, 1.5vw, 1.4rem); font-style: italic; font-family: 'Times New Roman', Times, serif; margin-bottom: 0.6rem; }
+.socials p { font-size: clamp(1rem, 1.5vw, 1.4rem); font-style: italic; font-family: 'Times New Roman', Times, serif; margin-bottom: 1rem; }
 
 .social-links2 { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
 .social-links2 i {
@@ -579,6 +620,7 @@ code {
     color: rgb(155, 72, 25);
     font-size: 1.4rem;
     transition: transform 0.2s;
+    margin-bottom: 1rem;
 }
 .social-links2 i:hover { transform: scale(1.2); }
 
@@ -613,38 +655,130 @@ code {
 /* ── Small tablets / large phones (≤768px) ── */
 @media (max-width: 768px) {
     /* nav */
-    .nav-container .links { display: none; }
-    .hamburg { display: block; }
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg {
+        display: block;
+    }
 
     /* home */
-    .Home { padding: 2rem 1.5rem; }
-    .main-container { flex-direction: column; text-align: center; gap: 2rem; }
-    .Hello, .image { flex: 1 1 100%; }
-    .image img { width: min(300px, 82vw); max-height: none; }
+    .Home {
+        padding: 1.25rem 1rem !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
 
+    .main-container {
+        display: flex;
+        flex-direction: column; /* stack text and image */
+        align-items: center;
+    }
+
+
+    .Hello h1 {
+        margin: 0 0 .5rem 0 !important;
+        line-height: 1.15 !important;
+    }
+
+    .intro-line {
+        margin: 0 0 .75rem 0 !important;
+    }
+
+    .social-links {
+        margin: .5rem 0 .75rem 0 !important;
+    }
+
+    .buttons {
+        margin: 0 0 1rem 0 !important;
+    }
+
+
+    .image{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        max-height: 300px;
+
+    }
+
+
+    .image img{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        display: block;
+    }
     /* about */
-    .About { padding: 3rem 1.5rem; }
-    .paragraph { padding: 0.5rem 1rem; }
-    .intro > img { max-width: 220px; }
+    .About {
+        padding: 3rem 1.5rem;
+    }
+
+    .paragraph {
+        padding: 0.5rem 1rem;
+    }
+
+    .intro > img {
+        max-width: 220px;
+    }
 
     /* background */
-    .background-cards { flex-direction: column; align-items: center; }
-    .back { max-width: 90%; width: 90%; }
+    .background-cards {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .back {
+        max-width: 90%;
+        width: 90%;
+    }
 
     /* projects */
-    .projects-section { padding: 3rem 1.2rem; }
-    .project-row { grid-template-columns: 1fr; }
-    .proj-left { border-right: none; border-bottom: 1px solid #d7c2b4; }
-    .proj-mid  { border-right: none; border-bottom: 1px solid #d7c2b4; }
+    .projects-section {
+        padding: 1rem 1rem;
+    }
+
+    .project-row {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-left {
+        border-right: none;
+        border-bottom: 1px solid #d7c2b4;
+    }
+
+    .proj-mid {
+        border-right: none;
+        border-bottom: 1px solid #d7c2b4;
+        padding: 0.5rem;
+    }
 
     /* skills */
-    .skills { padding: 3rem 1rem; }
-    .skills-grid { gap: 0.9rem; }
-    .skill-card { width: 104px; height: 108px; }
-    .skill-card img, .skill-card svg { width: 35px; height: 35px; }
-    .skill-card span { font-size: 0.72rem; }
-}
+    .skills {
+        padding: 3rem 1rem;
+    }
 
+    .skills-grid {
+        gap: 0.9rem;
+    }
+
+    .skill-card {
+        width: 104px;
+        height: 108px;
+    }
+
+    .skill-card img, .skill-card svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-card span {
+        font-size: 0.72rem;
+    }
+
+}
 /* ── Phones (≤480px) ── */
 @media (max-width: 480px) {
     .creative { font-size: clamp(1.8rem, 9vw, 2.8rem); }
@@ -655,4 +789,17 @@ code {
     .back { padding: 1rem 0.8rem; }
     .backimg img { height: 80px; }
     .Contact p { word-break: break-all; }
+
+    .About{
+        padding: 2.5rem 1rem;
+    }
+    .paragraph{
+        padding: 0.5rem;
+
+    }
+    .rakshya_image {
+        height: 20rem;
+        width: 15rem;
+
+    }
 }
